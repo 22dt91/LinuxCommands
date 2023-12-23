@@ -1,0 +1,4 @@
+These lines should be added to .bashrc file
+
+# GitCommit: this line adds all the files in a given folder and commits
+alias GitCommit='git add . && git commit'
