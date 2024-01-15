@@ -2,3 +2,16 @@ These lines should be added to .bashrc file
 
 # GitCommit: this line adds all the files in a given folder and commits
 alias GitCommit='git add . && git commit'
+
+alias HISTORY='ps aux --sort=start_time | grep -v kworker | grep -v airmosaic | grep -v skype | grep -v yum | grep -v bash | grep -v usr/lib | grep -v chrome | grep -v potify | grep -v clipse'
+alias svnMeld='svn st -u | egrep "^M|\*" | xargs ls | xargs svn diff --diff-cmd='meld' -r HEAD'
+alias svnDifferences='svn st -u | egrep "^M|\*"'
+alias mysvnDifferences='svn st -u | egrep "^M"'
+alias mysvnMeld='svn st -u | egrep "^M" | xargs ls | xargs svn diff --diff-cmd='meld' -r HEAD'
+alias SortGitTags='git log --tags --simplify-by-decoration --pretty="format:%ai %d"'
+alias SortProcess="ps aux --sort=start_time | grep -v kworker | grep -v hrome | grep -v clipse"
+alias CheckConflicts="grep -r HEAD * | grep '<<<'"
+alias GitSshProcess="SortProcess | egrep 'ssh|git'"
+alias Meteo="curl wttr.in/Monza,italy"
+alias calc="gnome-calculator"
+alias meld='flatpak run org.gnome.meld'
